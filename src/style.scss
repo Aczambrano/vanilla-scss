@@ -122,14 +122,38 @@ $font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
 
-            .boxes {
+            .boxes-left {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
                 gap: 20px;
                 margin-top: 20px;
 
-                .box{
+                .box-small{
+                    height: 280px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .box-medium{
+                    height: 361px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .box-normal{
                     width: 330px;
                     height: 500px;
                     display: flex;
@@ -141,24 +165,115 @@ $font-family: 'Inter', sans-serif;
                     font-weight: bold;
                     text-align: center;
                 }
+
             }
         }
   
         &--middle {
-          background: #d3ffd3;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+              
+                .boxes-middle {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  margin-top: 20px;
+              
+                  .box-big {
+                    height: 580px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    background: #e6f7ff; // Color de fondo opcional
+                  }
+        
+                  .box-medium {
+                    height: 340px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    background: #e6f7ff; // Color de fondo opcional
+                  }
+              }
         }
   
         &--right {
-          background: #ffd3d3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+              
+                .boxes-right {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  margin-top: 20px;
+
+                  .box-small{
+                    height: 215px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    }
+
+
+              
+                  .box-big {
+                    height: 500px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    background: #e6f7ff; // Color de fondo opcional
+                  }
+        
+                  .box-medium {
+                    height: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    background: #e6f7ff; // Color de fondo opcional
+                  }
+              }
         }
       }
     }
+
+    
+    
   
     .bottom-row {
-      background: #e0e0e0;
-      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center; // Centra el texto horizontalmente
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+
+      }
     }
   }
