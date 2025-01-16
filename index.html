@@ -95,17 +95,17 @@
               </div>
             </div>
             <div class="box-medium">
-              <div class="color-picker-title">(Y)our interface color.</div>
-              <div class="color-picker">
-                <div class="color-wheel" id="colorWheel"></div>
-                <div class="center-circle"></div>
-                <div class="selected-color" id="selectedColor"></div>
+              <div class="color-card" id="colorCard">
+                <p class="color-card__text">(Y)our interface color.</p>
+                <canvas id="colorCanvas" class="color-wheel"></canvas>
               </div>
             </div>
 
             <div class="box-normal">
               <img src="./public/images/Bitmap-2.webp" alt="">
             </div>
+
+
             <div class="box-with-text">
               <div class="text">
                 <p>(Y)our virtual houseplant.</p>
@@ -114,16 +114,19 @@
                 <img src="./public/images/plant-05.webp" alt="">
 
               </div>
+
+
               <div class="text-end">
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                 <p>Nietzsche watered it last.</p>
               </div>
 
+              
             </div>
 
+              
             <div class="box-normal">
               <img src="./public/images/Bitmap-2.webp" alt="">
-
             </div>
           </div>
 
@@ -131,7 +134,26 @@
 
         <div class="column column--middle">
           <div class="boxes-middle">
-            <div class="box-big">Row 1</div>
+            <div class="box-big-2">
+              <div class="profile-container">
+                  <div class="profile-title">(Y)our profile.</div>
+                  
+                  <div class="profile-image-container">
+                      <img src="./public/images/b2_e3_ha1_he2.webp" alt="Avatar 01">
+                  </div>
+      
+                  <div class="name-input-container">
+                      <input type="text" class="name-input" value="" placeholder="Enter name">
+                      <div class="input-placeholder">Input your own name.</div>
+                  </div>
+      
+                  <div class="customization-container">
+                      <img src="./public/images/styles.png" alt="">
+                  </div>
+              </div>
+          </div>
+
+
             <div class="box-big">
               <div class="text">
                 <p>(Y)our drawing.</p>
@@ -310,7 +332,7 @@
 
   <script src="./src/form.ts" type="module"></script>
   <script src="./src/timer.ts" type="module"></script>
-
+  <script src="./src/color.ts"></script>
 </body>
 
 </html>
