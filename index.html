@@ -83,9 +83,15 @@
         <div class="column column--left">
           <div class="boxes-left">
             <div class="box-small">
-              <div class="box-small__content">Hi Newton,
-                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
-                School is (your) creative studio.
+              <div class="box-small__content">
+                Hi <span id="dynamic-name">Newton  
+                  </span>,
+                  <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                   School is 
+                   <span class="yellow">
+                    (y)our
+                   </span>
+                     creative studio.
 
               </div>
 
@@ -143,7 +149,7 @@
                   </div>
       
                   <div class="name-input-container">
-                      <input type="text" class="name-input" value="" placeholder="Enter name">
+                      <input type="text" class="name-input" id="name-input" value="" placeholder="Enter name">
                       <div class="input-placeholder">Input your own name.</div>
                   </div>
       
@@ -281,10 +287,11 @@
 
               </div>
               <div class="video">
-                <iframe src="https://www.youtube.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1"
-                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; 
-              picture-in-picture" allowfullscreen="true" class="jsx-322683982"></iframe>
-              </div>
+                <iframe src="https://www.youtube-nocookie.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+            </div>
 
               <div class="text-end">
                 John Berger - Ways of Seeing
@@ -333,6 +340,7 @@
   <script src="./src/form.ts" type="module"></script>
   <script src="./src/timer.ts" type="module"></script>
   <script src="./src/color.ts"></script>
+  <script src="./src/text-binding.ts" type="module"></script>
 </body>
 
 </html>

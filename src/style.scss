@@ -30,12 +30,18 @@ body::-webkit-scrollbar {
     align-items: center;
     padding: 0 30px 0 30px;
     height: 80px;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 
     &__left {
         display: flex;
         align-items: center;
         gap: 2px;
         margin-left: 5px;
+        backdrop-filter: blur(10px); /* Da un efecto de desenfoque para fondos */
 
         .header__icon {
             display: flex;
@@ -142,6 +148,7 @@ body::-webkit-scrollbar {
     padding: 0 20px 0 20px;
     flex: 1;
     height: auto;
+    margin-top: 80px; 
 
     .columns-wrapper {
         display: flex;
@@ -1092,4 +1099,9 @@ body::-webkit-scrollbar {
             margin-left: 5px;
         }
     }
+}
+
+.yellow{
+    background-color: rgb(249 236 161);
+    padding: 1%;
 }
