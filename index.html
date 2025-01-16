@@ -46,25 +46,21 @@
 
 
   <link rel="stylesheet" href="./src/style.scss">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #e3e3e3, #f6dada);
-      margin: 0;
-      padding: 0;
-    }
-  </style>
 </head>
 
 <body>
-
+  <video autoplay muted loop id="background-video">
+    <source src="./public/videos/looney-tunes-06-hb.mp4" type="video/mp4">
+  </video>
   <div>
     <header class="header">
       <!-- Left Menu -->
       <div class="header__left">
         <div class="header__icon">👀</div>
-        <button class="header__button">Selected Work</button>
-        <button class="header__icon-button">i</button>
+        <div class="header__button">
+          Selected Work
+        </div>
+        <div class="header__icon-button">i</div>
       </div>
 
       <!-- Right Menu -->
@@ -86,11 +82,49 @@
       <div class="columns-wrapper">
         <div class="column column--left">
           <div class="boxes-left">
-            <div class="box-small">Box 1</div>
-            <div class="box-medium">Box 2</div>
-            <div class="box-normal">Box 3</div>
-            <div class="box-normal">Box 4</div>
-            <div class="box-normal">Box 5</div>
+            <div class="box-small">
+              <div class="box-small__content">Hi Newton,
+                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                School is (your) creative studio.
+
+              </div>
+
+              <div class="box-small__buttons">
+                <button class="social">@schoooooooooooo1</button>
+                <button class="email">info@schoooool.com</button>
+              </div>
+            </div>
+            <div class="box-medium">
+              <div class="color-picker-title">(Y)our interface color.</div>
+              <div class="color-picker">
+                <div class="color-wheel" id="colorWheel"></div>
+                <div class="center-circle"></div>
+                <div class="selected-color" id="selectedColor"></div>
+              </div>
+            </div>
+
+            <div class="box-normal">
+              <img src="./public/images/Bitmap-2.webp" alt="">
+            </div>
+            <div class="box-with-text">
+              <div class="text">
+                <p>(Y)our virtual houseplant.</p>
+              </div>
+              <div class="img">
+                <img src="./public/images/plant-05.webp" alt="">
+
+              </div>
+              <div class="text-end">
+                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                <p>Nietzsche watered it last.</p>
+              </div>
+
+            </div>
+
+            <div class="box-normal">
+              <img src="./public/images/Bitmap-2.webp" alt="">
+
+            </div>
           </div>
 
         </div>
@@ -98,19 +132,82 @@
         <div class="column column--middle">
           <div class="boxes-middle">
             <div class="box-big">Row 1</div>
-            <div class="box-big">Row 2</div>
-            <div class="box-medium">Row 3</div>
-            <div class="box-medium">Row 4</div>
+            <div class="box-big">
+              <div class="text">
+                <p>(Y)our drawing.</p>
+
+              </div>
+
+              <div class="box-img">
+                <div class="left">
+                  <img src="./public/images/descarga.png" alt="">
+
+                </div>
+                <div class="right">
+                  <img src="./public/images/pencil.svg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="box-medium">
+              <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="">
+            </div>
+
+            <div class="box-medium">
+              <div class="text">
+                <p>(Y)our poll.</p>
+              </div>
+              <div class="text-middle">
+                Vibe Check?
+              </div>
+              <div class="text-end">
+                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                <p>Nietzsche watered it last.</p>
+              </div>
+            </div>
           </div>
         </div>
-        
+
         <div class="column column--right">
           <div class="boxes-right">
             <div class="box-small">Row 1</div>
-            <div class="box-medium">Row 2</div>
-            <div class="box-medium">Row 3</div>
-            <div class="box-medium">Row 4</div>
-            <div class="box-big">Row 4</div>
+           
+            <div class="box-medium">
+            </div>
+            <div class="box-video">
+
+              <div class="text-start">
+                (Y)our chess match.
+
+              </div>
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture" allowfullscreen="true" class="jsx-322683982"></iframe>
+              </div>
+
+              <div class="text-end">
+                John Berger - Ways of Seeing
+              </div>
+
+              
+            </div>
+
+            
+            <div class="box-big-text">
+              <div class="text-start">
+                (Y)our chess match.
+
+              </div>
+              <div class="img">
+                <img src="./public/images/chess.png" alt="">
+              </div>
+
+              <div class="text-end">
+                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                Tolstoy made the last move.
+              </div>
+            </div>
 
           </div>
 
@@ -123,9 +220,16 @@
     </div>
 
 
+    <footer class="footer">
+      <div class="footer-copy">
+        <div class="copyright">© School 2025</div>
+      </div>
+      <div class="footer-content">
+        <button class="social">@schoooooooooooo1</button>
+        <button class="email">info@schoooool.com</button>
+      </div>
+    </footer>
   </div>
-
-
 
 </body>
 
