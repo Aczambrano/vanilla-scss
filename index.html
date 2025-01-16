@@ -153,16 +153,35 @@
               <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="">
             </div>
 
-            <div class="box-medium">
-              <div class="text">
-                <p>(Y)our poll.</p>
-              </div>
-              <div class="text-middle">
-                Vibe Check?
-              </div>
-              <div class="text-end">
-                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
-                <p>Nietzsche watered it last.</p>
+            <div class="box-form">
+              <div class="poll-title">(Y)our poll.</div>
+              <div class="poll-container" id="pollContainer">
+                <div class="poll-question">Vibe Check?</div>
+                <form id="pollForm">
+                  <div class="poll-options">
+                    <div class="poll-option">
+                      <input type="radio" id="option1" name="vibe" value="um">
+                      <label for="option1">Um.....</label>
+                      <span class="percentage">16%</span>
+                    </div>
+                    <div class="poll-option">
+                      <input type="radio" id="option2" name="vibe" value="warming">
+                      <label for="option2">Warming up to this vibe.</label>
+                      <span class="percentage">29%</span>
+                    </div>
+                    <div class="poll-option">
+                      <input type="radio" id="option3" name="vibe" value="definitely">
+                      <label for="option3">Definitely vibin!</label>
+                      <span class="percentage">36%</span>
+                    </div>
+                    <div class="poll-option">
+                      <input type="radio" id="option4" name="vibe" value="aboard">
+                      <label for="option4">Been aboard the vibe train for a minute! Choo choo!!</label>
+                      <span class="percentage">19%</span>
+                    </div>
+                  </div>
+                  <button type="submit" class="submit-button">Submit</button>
+                </form>
               </div>
             </div>
           </div>
@@ -170,8 +189,34 @@
 
         <div class="column column--right">
           <div class="boxes-right">
-            <div class="box-small">Row 1</div>
-           
+            <div class="box-small">
+              <div class="card-weather">
+                <div class="card-title">(Y)our weather.</div>
+                <div class="weather-content">
+                  <div class="clouds-container">
+                    <img src="./public/images/day-cloudy.webp" alt="">
+                  </div>
+                  <div class="weather-info">28°F & Clouds (NYC)</div>
+                </div>
+              </div>
+
+              <!-- Timer Card -->
+              <div class="card">
+                <div class="card-title">(Y)our button</div>
+                <div class="timer-content">
+                  <div class="timer-display" id="timer">00:00:00</div>
+                  <button class="click-button" id="clickButton">Click</button>
+
+                </div>
+                <div class="last-click">
+                  <div class="user-avatar">
+                    <img src="./public/images/avatar-01.webp" alt="">
+                  </div>
+                  <span>Anderson clicked it last.</span>
+                </div>
+              </div>
+            </div>
+
             <div class="box-video">
 
               <div class="text-start">
@@ -189,6 +234,24 @@
               </div>
 
             </div>
+
+
+            <div class="box-big-text-1">
+              <div class="text-start">
+                Art History 008.
+
+              </div>
+              <div class="img">
+                <img src="./public/images/art-history.webp" alt="">
+              </div>
+
+              <div class="text-end">
+                Wheatfield - A Confrontation <br>
+                Agnes Denes<br>
+                1982
+              </div>
+            </div>
+
             <div class="box-video">
 
               <div class="text-start">
@@ -196,18 +259,18 @@
 
               </div>
               <div class="video">
-                <iframe src="https://www.youtube.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1" 
-              frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; 
+                <iframe src="https://www.youtube.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1"
+                  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; 
               picture-in-picture" allowfullscreen="true" class="jsx-322683982"></iframe>
               </div>
 
               <div class="text-end">
                 John Berger - Ways of Seeing
               </div>
-              
+
             </div>
 
-            
+
             <div class="box-big-text">
               <div class="text-start">
                 (Y)our chess match.
@@ -244,6 +307,9 @@
       </div>
     </footer>
   </div>
+
+  <script src="./src/form.ts" type="module"></script>
+  <script src="./src/timer.ts" type="module"></script>
 
 </body>
 
