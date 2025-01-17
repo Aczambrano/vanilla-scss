@@ -1,98 +1,59 @@
-.box-big-text {
-    height: 500px;
+/* Estilos comunes para las cajas */
+.box-common {
     display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 11px;
+    background: white;
+    line-height: 1.4;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(48, 48, 48);
+}
+
+.img {
+    img {
+        max-width: 100%;
+    }
+}
+
+.text-start, .text-end {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.text-start {
+    flex-direction: column;
+}
+
+.text-end {
     flex: 1;
-    flex-direction: column;
-    border-radius: 8px;
+    justify-content: start;
     font-size: 11px;
-    background: white;
-    line-height: 1.4;
-    font-family: 'IBM Plex Mono', monospace;
-    color: rgb(48, 48, 48);
+    margin-left: 5px;
+    margin-right: 5px;
 
-    .text-start {
-        padding: 5px;
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-    }
-
-
-    .img {
-        img {
-            max-width: 100%;
-        }
-    }
-
-    .text-end {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: start;
-        font-size: 11px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 5px;
-
-        img {
-            border-radius: 50%;
-            width: 25px;
-            background-color: rgb(202, 247, 76);
-            margin-right: 10px;
-        }
+    img {
+        border-radius: 50%;
+        width: 25px;
+        background-color: rgb(202, 247, 76);
+        margin-right: 10px;
     }
 }
 
-.box-big-text-1 {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    font-size: 11px;
-    background: white;
-    line-height: 1.4;
-    font-family: 'IBM Plex Mono', monospace;
-    color: rgb(48, 48, 48);
-
-    .text-start {
-        padding: 5px;
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-    }
-
-
-    .img {
-        img {
-            max-width: 100%;
-        }
-    }
-
-    .text-end {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: start;
-        font-size: 11px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 5px;
-
-        img {
-            border-radius: 50%;
-            width: 25px;
-            background-color: rgb(202, 247, 76);
-            margin-right: 10px;
-        }
-    }
+.box-big-text, .box-big-text-1, .color-card, .box-with-text {
+    @extend .box-common;
 }
 
+.box-with-text {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
 
 .color-card {
     width: 100%;
     height: 100%;
-    border-radius: 8px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -113,55 +74,31 @@
     cursor: pointer;
 }
 
-
-.box-with-text {
+.box-with-text .text {
+    font-size: 11px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-with-text .img {
     display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    font-size: 20px;
-    padding-bottom: 10px;
-    background-color: white;
-    line-height: 1.4;
+    justify-content: center;
+    align-items: center;
 
-    .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 11px;
-        width: 100%;
+    img {
+        object-fit: cover;
+    }
+}
 
+.box-with-text .text-end {
+    margin-top: 5px;
+
+    img {
+        width: 30px;
     }
 
-    .img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .text-end {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        font-size: 11px;
-
-        margin-top: 5px;
+    p {
         margin-left: 5px;
-        margin-right: 5px;
-
-        img {
-            border-radius: 50%;
-            width: 30px;
-            background-color: rgb(202, 247, 76);
-        }
-
-        p {
-            margin-left: 5px;
-        }
     }
 }

@@ -1,9 +1,11 @@
+@use './variables.scss' as variables;
+
 $avatar-size: 40px;
 $font-family: 'Inter', sans-serif;
 $icon-size: 40px;
 
 body {
-    font-family: 'Inter', sans-serif;
+    @include variables.typography('IBM Plex Mono', 16px, #333);
     background: linear-gradient(to right, #e3e3e3, #f6dada);
     margin: 0;
     padding: 0;
@@ -25,29 +27,18 @@ body::-webkit-scrollbar {
 
 
 .box-small {
-    display: flex;
-    gap: 20px;
-}
+    @include variables.flex(center, start, 20px);
+  }
+  
 
 .card-weather {
-    background: white;
-    border-radius: 12px;
-    flex: 1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    line-height: 1.4;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    @include variables.card(1);
+
 
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    flex: 2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    line-height: 1.4;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    @include variables.card(2);
     align-items: center;
 
 }
@@ -79,20 +70,16 @@ body::-webkit-scrollbar {
     }
 }
 
-
 .timer-content {
-    display: flex;
+    @include variables.flex(center, center, 15px);
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
 }
 
 .timer-display {
-    display: flex;
-    color: gray;
-    font-size: 42px;
+    @include variables.typography('IBM Plex Mono', 42px, gray);
     font-weight: 300;
-}
+    display: flex;
+  }
 
 .click-button {
     background: #f5f5f5;
@@ -114,10 +101,8 @@ body::-webkit-scrollbar {
 }
 
 .last-click {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
+    @include variables.flex(center, start, 10px);
+    padding-bottom: 2%;
     margin-left: 10px;
 }
 

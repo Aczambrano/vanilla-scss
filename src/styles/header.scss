@@ -1,9 +1,12 @@
+@use './variables.scss' as variables;
+
+
 $avatar-size: 40px;
 $font-family: 'Inter', sans-serif;
 $icon-size: 40px;
 .header {
-    display: flex;
-    justify-content: space-between;
+    @include variables.flex(center, space-between); 
+
     align-items: center;
     padding: 0 30px 0 30px;
     height: 80px;
@@ -11,23 +14,20 @@ $icon-size: 40px;
     top: 0; 
     left: 0;
     right: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
 
     &__left {
-        display: flex;
-        align-items: center;
-        gap: 2px;
+        @include variables.flex(center, start, 2px);
+
         margin-left: 5px;
-        backdrop-filter: blur(10px); /* Da un efecto de desenfoque para fondos */
 
         .header__icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;
             border-radius: 50% 0 0 50%;
             background-color: rgba(235, 235, 235, 0.6);
+            backdrop-filter: blur(10px); 
 
             font-size: 20px;
             cursor: pointer;
@@ -39,14 +39,13 @@ $icon-size: 40px;
         }
 
         .header__button {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            @include variables.flex(center, start, 8px); 
             padding: 11.5px 16px;
             border: 1px solid #ddd;
             font-size: 11px;
             cursor: pointer;
             background-color: rgba(235, 235, 235, 0.7);
+            backdrop-filter: blur(10px); 
 
             line-height: 1.4;
             font-family: 'IBM Plex Mono', monospace;
@@ -62,16 +61,17 @@ $icon-size: 40px;
         }
 
         .header__icon-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;
             border-radius: 0 50% 50% 0%;
             font-size: 16px;
             cursor: pointer;
+            border: 1px solid #ddd;
+
             transition: background-color 0.2s;
             background-color: rgba(235, 235, 235, 0.7);
+            backdrop-filter: blur(10px);
 
             .header__icon-button:focus {
                 outline: none;
@@ -85,13 +85,10 @@ $icon-size: 40px;
     }
 
     &__right {
-        display: flex;
-        gap: 10px;
+        @include variables.flex(center, start, 10px); 
 
         .avatar {
-            width: $avatar-size;
-            height: $avatar-size;
-            border-radius: 50%;
+            @include variables.avatar($avatar-size);
             border: 2px solid #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
