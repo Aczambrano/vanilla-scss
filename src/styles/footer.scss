@@ -7,29 +7,27 @@
     line-height: 1.4;
     font-family: 'IBM Plex Mono', monospace;
 
-    .footer-copy {
+    &__copy {
         margin-left: 30px;
         margin-top: 5px;
         color: rgb(48, 48, 48);
         font-size: 12px;
-        align-items: end;
-        justify-content: end;
-
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
-    .footer-content {
+    &__content {
         display: flex;
         justify-content: space-between;
         border-radius: 15px;
         margin-right: 25px;
     }
 
-    .social,
-    .email {
+    &__social,
+    &__email {
         width: 200px;
         background-color: #efefef;
         color: rgb(48, 48, 48);
-        ;
         font-size: 11px;
         padding: 12px 20px;
         border: none;
@@ -37,22 +35,18 @@
         cursor: pointer;
         transition: background-color 0.3s, transform 0.3s;
 
-
         &:hover {
             background-color: #e6e3e3;
             transform: scale(1.05);
         }
     }
 
-    .email {
+    &__email {
         margin-left: 10px;
     }
 
-    .copyright,
-    .social,
-    .email {
-        &:hover {
-            color: #333;
-        }
+    &__social:hover,
+    &__email:hover {
+        color: #333;
     }
 }

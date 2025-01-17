@@ -3,10 +3,13 @@
 .column--right {
     @include variables.column-flexbox();
     margin-top: 20px;
+
     .boxes-right {
         @include variables.column-flexbox();
+
         .box-big {
             @include variables.box-common(18px, bold, #e6f7ff, center);
+
             img {
                 max-width: 100%;
             }
@@ -64,6 +67,107 @@
                 margin-right: 12px;
                 padding: 5px;
             }
+        }
+
+
+        &__box-small {
+            @include variables.flex(center, start, 20px);
+        }
+
+
+        .card-weather {
+            @include variables.card(1);
+
+
+        }
+
+        .card {
+            @include variables.card(2);
+            align-items: center;
+
+        }
+
+        .weather-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .card-title {
+            text-align: center;
+            color: #333;
+            margin: 5px;
+        }
+
+        .weather-info {
+            background: white;
+            border-radius: 6px;
+            margin: 5px;
+            color: #333;
+            text-align: center;
+        }
+
+        .clouds-container {
+            display: flex;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .timer-content {
+            @include variables.flex(center, center, 15px);
+            flex-direction: column;
+        }
+
+        .timer-display {
+            @include variables.typography('IBM Plex Mono', 42px, gray);
+            font-weight: 300;
+            display: flex;
+        }
+
+        .click-button {
+            background: #f5f5f5;
+            border: none;
+            padding: 10px 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            align-items: center;
+            line-height: 1.4;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: rgb(48, 48, 48);
+            margin-bottom: 15px;
+        }
+
+        .click-button:hover {
+            background: #eee;
+        }
+
+        .last-click {
+            @include variables.flex(center, start, 10px);
+            padding-bottom: 2%;
+            margin-left: 10px;
+        }
+
+        .user-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #98ff98;
+            display: flex;
+            align-items: start;
+            justify-content: flex-start;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .yellow {
+            background-color: rgb(249 236 161);
+            padding: 1%;
         }
     }
 }

@@ -21,14 +21,13 @@ $icon-size: 40px;
 
         margin-left: 5px;
 
-        .header__icon {
+        .header-icon {
             @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;
             border-radius: 50% 0 0 50%;
             background-color: rgba(235, 235, 235, 0.6);
             backdrop-filter: blur(10px); 
-
             font-size: 20px;
             cursor: pointer;
             transition: 0.2s ease-in;
@@ -38,7 +37,7 @@ $icon-size: 40px;
             }
         }
 
-        .header__button {
+        .header-button {
             @include variables.flex(center, start, 8px); 
             padding: 11.5px 16px;
             border: 1px solid #ddd;
@@ -60,7 +59,7 @@ $icon-size: 40px;
             }
         }
 
-        .header__icon-button {
+        .header-icon-button {
             @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;
