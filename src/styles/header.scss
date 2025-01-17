@@ -21,7 +21,7 @@ $icon-size: 40px;
 
         margin-left: 5px;
 
-        .header-icon {
+        &--icon {
             @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;
@@ -37,7 +37,7 @@ $icon-size: 40px;
             }
         }
 
-        .header-button {
+        &--button {
             @include variables.flex(center, start, 8px); 
             padding: 11.5px 16px;
             border: 1px solid #ddd;
@@ -59,7 +59,7 @@ $icon-size: 40px;
             }
         }
 
-        .header-icon-button {
+        &--icon-button {
             @include variables.flex(center, center); 
             width: $icon-size;
             height: $icon-size;

@@ -1,4 +1,4 @@
-  class PollForm {
+class PollForm {
     private form: HTMLFormElement;
     private container: HTMLElement;
 
@@ -16,11 +16,10 @@
     }
 
     private showResults(): void {
-        this.container.classList.add('show-results');
+        this.container.classList.add('poll--show-results');
     }
 }
 
-// Initialize the poll when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new PollForm();
 });

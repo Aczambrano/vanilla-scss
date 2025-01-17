@@ -2,26 +2,26 @@ class Timer {
     private display: HTMLElement;
     private button: HTMLElement;
     private timer: number = 0;
-    private running: boolean = true; // Iniciar como 'true' porque queremos que empiece inmediatamente
+    private running: boolean = true; 
     private seconds: number = 0;
 
     constructor() {
         this.display = document.getElementById('timer')!;
         this.button = document.getElementById('clickButton')!;
-        this.startTimer(); // Iniciar el temporizador automáticamente al cargar la página
+        this.startTimer(); 
         this.initialize();
     }
 
     private initialize(): void {
         this.button.addEventListener('click', () => {
             if (this.running) {
-                this.stopTimer(); // Detener el temporizador
-                this.seconds = 0; // Reiniciar el temporizador a cero
-                this.updateDisplay(); // Actualizar la pantalla a "00:00:00"
+                this.stopTimer(); 
+                this.seconds = 0; 
+                this.updateDisplay(); 
             } else {
-                this.startTimer(); // Iniciar el temporizador
+                this.startTimer(); 
             }
-            this.running = !this.running; // Cambiar el estado de 'running' después de iniciar o detener
+            this.running = !this.running; 
         });
     }
 
@@ -50,7 +50,6 @@ class Timer {
     }
 }
 
-// Inicializar el temporizador cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
     new Timer();
 });

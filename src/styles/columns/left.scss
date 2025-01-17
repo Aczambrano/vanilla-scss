@@ -32,8 +32,8 @@
                 gap: 10px;
                 border-radius: 15px;
 
-                .social,
-                .email {
+                &--social,
+                &--email {
                     background-color: #efefef;
                     line-height: 1.4;
                     font-family: 'IBM Plex Mono', monospace;
@@ -51,8 +51,8 @@
                     }
                 }
 
-                .social,
-                .email {
+                &--social,
+                &--email {
                     &:hover {
                         color: #333;
                     }

@@ -19,19 +19,19 @@
             @include variables.box-common(11px, normal, white, left);
             align-items: stretch;
 
-            .text-start {
+            &__text-start {
                 padding: 5px;
                 align-items: center;
                 flex-direction: column;
                 display: flex;
             }
 
-            .gif img {
+            &__gif img {
                 width: 100%;
                 height: 100%;
             }
 
-            .tags {
+            &__tags {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -40,6 +40,14 @@
                 padding: 5px;
                 border-radius: 0 0 8px 8px;
                 cursor: pointer;
+
+                &--tag {
+                    padding: 5px 12px;
+                    border-radius: 20px;
+                    margin: 5px;
+                    color: rgb(48, 48, 48);
+                    background-color: rgb(187, 187, 187);
+                }
             }
 
             .text-tag {
@@ -48,13 +56,7 @@
                 bottom: 0px;
             }
 
-            .tag {
-                padding: 5px 12px;
-                border-radius: 20px;
-                margin: 5px;
-                color: rgb(48, 48, 48);
-                background-color: rgb(187, 187, 187);
-            }
+            
 
             .video iframe {
                 width: 100%;
