@@ -1,0 +1,100 @@
+.column--left {
+    display: flex;
+    flex-direction: column;
+
+    .boxes-left {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+
+        .box-small {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            font-size: 20px;
+            line-height: 1.4;
+
+            &__content {
+                font-size: 44px;
+                font-weight: 400;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: rgb(48, 48, 48);
+
+                img {
+                    border-radius: 50%;
+                    max-width: 40px;
+                    max-height: 40px;
+                    background-color: #e0bff4;
+                }
+            }
+
+            &__buttons {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                border-radius: 15px;
+
+                .social,
+                .email {
+                    background-color: #efefef;
+                    line-height: 1.4;
+                    font-family: 'IBM Plex Mono', monospace;
+                    color: rgb(48, 48, 48);
+                    font-size: 11px;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.3s;
+
+                    &:hover {
+                        background-color: #e6e3e3;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .social,
+                .email {
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+        .box-medium {
+            height: 361px;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            font-size: 11px;
+            text-align: center;
+            color: rgb(48, 48, 48);
+            background-color: white;
+        }
+
+        .box-normal {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    }
+}

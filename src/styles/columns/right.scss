@@ -1,0 +1,107 @@
+.column--right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .boxes-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+
+        .box-big {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background: #e6f7ff;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .box-medium {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background: #e6f7ff;
+        }
+
+        .box-video {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 11px;
+            background: white;
+            line-height: 1.4;
+            font-family: 'IBM Plex Mono', monospace;
+            color: rgb(48, 48, 48);
+            border-radius: 8px;
+
+            .text-start {
+                padding: 5px;
+                align-items: center;
+                flex-direction: column;
+                display: flex;
+            }
+
+            .gif {
+                position: relative;
+                width: 100%;
+            }
+
+            .gif img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .tags {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                z-index: 1;
+                background-color: rgb(233 232 226);
+                padding: 5px;
+                border-radius: 0 0 8px 8px;
+                cursor: pointer;
+            }
+
+            .text-tag {
+                position: absolute;
+                z-index: 10;
+                bottom: 0px;
+            }
+
+            .tag {
+                padding: 5px 12px;
+                border-radius: 20px;
+                margin: 5px;
+                color: rgb(48, 48, 48);
+                background-color: rgb(187, 187, 187);
+            }
+
+            .video iframe {
+                width: 100%;
+                height: 350px;
+            }
+
+            .text-end {
+                font-size: 11px;
+                margin-left: 5px;
+                margin-right: 12px;
+                padding: 5px;
+            }
+        }
+    }
+}

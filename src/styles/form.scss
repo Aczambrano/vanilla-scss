@@ -1,0 +1,113 @@
+
+.box-form {
+    height: auto;
+    min-height: 300px;
+    padding: 24px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.poll-title {
+    text-align: center;
+    font-family: monospace;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.poll-question {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 4px 12px;
+    background: #fefeb0;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+.poll-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.poll-option input[type="radio"]:checked {
+    border-color: #000;
+    background: #000;
+}
+
+.poll-option label {
+    font-size: 16px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.poll-option .percentage {
+    display: none;
+    font-size: 16px;
+    color: #666;
+}
+
+.submit-button {
+    width: 34%;
+    padding: 12px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.submit-button:hover {
+    background: #eee;
+}
+
+/* Results state styles */
+.show-results .poll-option {
+    pointer-events: none;
+}
+
+.show-results .percentage {
+    display: block;
+}
+
+.show-results input[type="radio"] {
+    opacity: 0.5;
+}
+
+.show-results .submit-button {
+    display: none;
+}

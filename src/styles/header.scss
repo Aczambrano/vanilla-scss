@@ -1,0 +1,119 @@
+$avatar-size: 40px;
+$font-family: 'Inter', sans-serif;
+$icon-size: 40px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    height: 80px;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        margin-left: 5px;
+        backdrop-filter: blur(10px); /* Da un efecto de desenfoque para fondos */
+
+        .header__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $icon-size;
+            height: $icon-size;
+            border-radius: 50% 0 0 50%;
+            background-color: rgba(235, 235, 235, 0.6);
+
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+
+            &:hover {
+                background-color: #d6d6d6;
+            }
+        }
+
+        .header__button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11.5px 16px;
+            border: 1px solid #ddd;
+            font-size: 11px;
+            cursor: pointer;
+            background-color: rgba(235, 235, 235, 0.7);
+
+            line-height: 1.4;
+            font-family: 'IBM Plex Mono', monospace;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #e9e9e9;
+            }
+
+            &-icon {
+                font-size: 16px;
+            }
+        }
+
+        .header__icon-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $icon-size;
+            height: $icon-size;
+            border-radius: 0 50% 50% 0%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            background-color: rgba(235, 235, 235, 0.7);
+
+            .header__icon-button:focus {
+                outline: none;
+            }
+
+
+            &:hover {
+                background-color: #d6d6d6;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: 10px;
+
+        .avatar {
+            width: $avatar-size;
+            height: $avatar-size;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            &--red {
+                background-color: #e6b3b3;
+            }
+
+            &--yellow {
+                background-color: #fffc9a;
+            }
+
+            &--lilac {
+                background-color: #e0bff4;
+            }
+        }
+    }
+}

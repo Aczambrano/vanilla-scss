@@ -4,10 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
   <title>Your creative studio | School</title>
   <meta charset="utf-8" data-react-helmet="true">
   <meta name="description"
@@ -41,188 +37,179 @@
   <meta name="twitter:image"
     content="https://images.ctfassets.net/nr300w6wpi1u/7aDFpzMtT8NV1KKYXfuRD8/a3f36290062904746f3fb739636a28af/home-seo-01.png?w=1200&fm=png"
     data-react-helmet="true">
+
   <link rel="icon" type="image/png" href="./public/images/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="./public/images/favicon-32x32.png" sizes="32x32">
 
+  <link rel="stylesheet" href="./src/styles/style.scss">
+  <link rel="stylesheet" href="./src/styles/header.scss">
+  <link rel="stylesheet" href="./src/styles/container.scss">
+  <link rel="stylesheet" href="./src/styles/footer.scss">
+  <link rel="stylesheet" href="./src/styles/form.scss">
+  <link rel="stylesheet" href="./src/styles/box.scss">
+  <link rel="stylesheet" href="./src/styles/columns/left.scss">
+  <link rel="stylesheet" href="./src/styles/columns/middle.scss">
+  <link rel="stylesheet" href="./src/styles/columns/right.scss">
 
-  <link rel="stylesheet" href="./src/style.scss">
 </head>
 
 <body>
-  <video autoplay muted loop id="background-video">
+  <video autoplay muted loop id="background-video" aria-label="Background video">
     <source src="./public/videos/looney-tunes-06-hb.mp4" type="video/mp4">
   </video>
   <div>
-    <header class="header">
+    <header class="header" role="banner">
       <!-- Left Menu -->
-      <div class="header__left">
-        <div class="header__icon">👀</div>
-        <div class="header__button">
-          Selected Work
+      <nav class="header__left" aria-label="Left menu">
+        <div class="header__icon">
+          <img src="./public/images/favicon-32x32.png" alt="Favicon">
         </div>
-        <div class="header__icon-button">i</div>
-      </div>
+        <button class="header__button" aria-label="Selected Work">Selected Work</button>
+        <button class="header__icon-button" aria-label="Information">i</button>
+      </nav>
 
       <!-- Right Menu -->
-      <div class="header__right">
-        <div class="avatar avatar--red">
+      <nav class="header__right" aria-label="Right menu">
+        <div class="avatar avatar--red" role="img" aria-label="Red avatar">
           <img src="./public/images/avatar-01.webp" alt="Avatar 01">
         </div>
-        <div class="avatar avatar--yellow">
-          <img src="./public/images/avatar-02.webp" alt="Avatar 01">
+        <div class="avatar avatar--yellow" role="img" aria-label="Yellow avatar">
+          <img src="./public/images/avatar-02.webp" alt="Avatar 02">
         </div>
-        <div class="avatar avatar--lilac">
-          <img src="./public/images/avatar-03.webp" alt="Avatar 01">
+        <div class="avatar avatar--lilac" role="img" aria-label="Lilac avatar">
+          <img src="./public/images/avatar-03.webp" alt="Avatar 03">
         </div>
-      </div>
+      </nav>
     </header>
 
-
-    <div class="container">
+    <main class="container">
       <div class="columns-wrapper">
-        <div class="column column--left">
+        <section class="column column--left" aria-labelledby="left-column">
           <div class="boxes-left">
-            <div class="box-small">
+            <article class="box-small">
               <div class="box-small__content">
-                Hi <span id="dynamic-name">Newton  
-                  </span>,
-                  <img src="./public/images/avatar-01.webp" alt="Avatar 01">
-                   School is 
-                   <span class="yellow">
-                    (y)our
-                   </span>
-                     creative studio.
-
+                Hi <span id="dynamic-name">Newton</span>,
+                <img src="./public/images/avatar-01.webp" alt="Avatar 01">
+                School is <span class="yellow">(y)our</span> creative studio.
               </div>
-
               <div class="box-small__buttons">
-                <button class="social">@schoooooooooooo1</button>
-                <button class="email">info@schoooool.com</button>
+                <button class="social" aria-label="Twitter">@schoooooooooooo1</button>
+                <button class="email" aria-label="Email">info@schoooool.com</button>
               </div>
-            </div>
-            <div class="box-medium">
-              <div class="color-card" id="colorCard">
+            </article>
+
+            <article class="box-medium">
+              <div class="color-card" id="colorCard" role="region" aria-labelledby="colorCard">
                 <p class="color-card__text">(Y)our interface color.</p>
-                <canvas id="colorCanvas" class="color-wheel"></canvas>
+                <canvas id="colorCanvas" class="color-wheel" role="img" aria-label="Color wheel"></canvas>
               </div>
-            </div>
+            </article>
 
-            <div class="box-normal">
-              <img src="./public/images/Bitmap-2.webp" alt="">
-            </div>
+            <article class="box-normal">
+              <img src="./public/images/Bitmap-2.webp" alt="Image description">
+            </article>
 
-
-            <div class="box-with-text">
+            <article class="box-with-text">
               <div class="text">
                 <p>(Y)our virtual houseplant.</p>
               </div>
               <div class="img">
-                <img src="./public/images/plant-05.webp" alt="">
-
+                <img src="./public/images/plant-05.webp" alt="Houseplant">
               </div>
-
 
               <div class="text-end">
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                 <p>Nietzsche watered it last.</p>
               </div>
+            </article>
 
-              
-            </div>
-
-              
-            <div class="box-normal">
-              <img src="./public/images/Bitmap-2.webp" alt="">
-            </div>
+            <article class="box-normal">
+              <img src="./public/images/Bitmap-2.webp" alt="Image description">
+            </article>
           </div>
+        </section>
 
-        </div>
-
-        <div class="column column--middle">
+        <section class="column column--middle" aria-labelledby="middle-column">
           <div class="boxes-middle">
-            <div class="box-big-2">
+            <article class="box-big-2">
               <div class="profile-container">
-                  <div class="profile-title">(Y)our profile.</div>
-                  
-                  <div class="profile-image-container">
-                      <img src="./public/images/b2_e3_ha1_he2.webp" alt="Avatar 01">
-                  </div>
-      
-                  <div class="name-input-container">
-                      <input type="text" class="name-input" id="name-input" value="" placeholder="Enter name">
-                      <div class="input-placeholder">Input your own name.</div>
-                  </div>
-      
-                  <div class="customization-container">
-                      <img src="./public/images/styles.png" alt="">
-                  </div>
+                <div class="profile-title" id="profile-title">(Y)our profile.</div>
+
+                <div class="profile-image-container">
+                  <img src="./public/images/b2_e3_ha1_he2.webp" alt="Profile avatar">
+                </div>
+
+                <div class="name-input-container">
+                  <input type="text" class="name-input" id="name-input" value="" placeholder="Enter name" tabindex="0">
+                  <div class="input-placeholder" aria-hidden="true">Input your own name.</div>
+                </div>
+
+                <div class="customization-container">
+                  <img src="./public/images/styles.png" alt="Customization options">
+                </div>
               </div>
-          </div>
+            </article>
 
-
-            <div class="box-big">
+            <article class="box-big">
               <div class="text">
                 <p>(Y)our drawing.</p>
-
               </div>
 
               <div class="box-img">
                 <div class="left">
-                  <img src="./public/images/descarga.png" alt="">
-
+                  <img src="./public/images/descarga.png" alt="Drawing">
                 </div>
                 <div class="right">
-                  <img src="./public/images/pencil.svg" alt="">
+                  <img src="./public/images/pencil.svg" alt="Pencil icon">
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="box-medium">
-              <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="">
-            </div>
+            <article class="box-medium">
+              <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="Screen shot">
+            </article>
 
-            <div class="box-form">
+            <article class="box-form">
               <div class="poll-title">(Y)our poll.</div>
-              <div class="poll-container" id="pollContainer">
-                <div class="poll-question">Vibe Check?</div>
-                <form id="pollForm">
+              <div class="poll-container" id="pollContainer" role="form" aria-labelledby="pollForm">
+                <div class="poll-question" aria-live="polite">Vibe Check?</div>
+                <form id="pollForm" aria-labelledby="pollForm">
                   <div class="poll-options">
-                    <div class="poll-option">
-                      <input type="radio" id="option1" name="vibe" value="um">
-                      <label for="option1">Um.....</label>
+                    <label class="poll-option">
+                      <input type="radio" id="option1" name="vibe" value="um" tabindex="0">
+                      <span>Um.....</span>
                       <span class="percentage">16%</span>
-                    </div>
-                    <div class="poll-option">
-                      <input type="radio" id="option2" name="vibe" value="warming">
-                      <label for="option2">Warming up to this vibe.</label>
+                    </label>
+                    <label class="poll-option">
+                      <input type="radio" id="option2" name="vibe" value="warming" tabindex="0">
+                      <span>Warming up to this vibe.</span>
                       <span class="percentage">29%</span>
-                    </div>
-                    <div class="poll-option">
-                      <input type="radio" id="option3" name="vibe" value="definitely">
-                      <label for="option3">Definitely vibin!</label>
+                    </label>
+                    <label class="poll-option">
+                      <input type="radio" id="option3" name="vibe" value="definitely" tabindex="0">
+                      <span>Definitely vibin!</span>
                       <span class="percentage">36%</span>
-                    </div>
-                    <div class="poll-option">
-                      <input type="radio" id="option4" name="vibe" value="aboard">
-                      <label for="option4">Been aboard the vibe train for a minute! Choo choo!!</label>
+                    </label>
+                    <label class="poll-option">
+                      <input type="radio" id="option4" name="vibe" value="aboard" tabindex="0">
+                      <span>Been aboard the vibe train for a minute! Choo choo!!</span>
                       <span class="percentage">19%</span>
-                    </div>
+                    </label>
                   </div>
-                  <button type="submit" class="submit-button">Submit</button>
+                  <button type="submit" class="submit-button" tabindex="0">Submit</button>
                 </form>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
 
-        <div class="column column--right">
+        <section class="column column--right" aria-labelledby="right-column">
           <div class="boxes-right">
-            <div class="box-small">
+            <article class="box-small">
               <div class="card-weather">
                 <div class="card-title">(Y)our weather.</div>
                 <div class="weather-content">
                   <div class="clouds-container">
-                    <img src="./public/images/day-cloudy.webp" alt="">
+                    <img src="./public/images/day-cloudy.webp" alt="Cloudy weather">
                   </div>
                   <div class="weather-info">28°F & Clouds (NYC)</div>
                 </div>
@@ -232,27 +219,24 @@
               <div class="card">
                 <div class="card-title">(Y)our button</div>
                 <div class="timer-content">
-                  <div class="timer-display" id="timer">00:00:00</div>
-                  <button class="click-button" id="clickButton">Click</button>
-
+                  <div class="timer-display" id="timer" aria-live="polite">00:00:00</div>
+                  <button class="click-button" id="clickButton" aria-label="Click button">Click</button>
                 </div>
                 <div class="last-click">
                   <div class="user-avatar">
-                    <img src="./public/images/avatar-01.webp" alt="">
+                    <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                   </div>
                   <span>Anderson clicked it last.</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="box-video">
-
-              <div class="text-start">
+            <article class="box-video">
+              <div class="text-start" aria-hidden="true">
                 Featured Project
-
               </div>
               <div class="gif">
-                <img src="./public/images/ezgif.com-gif-maker__76_.webp" alt="">
+                <img src="./public/images/ezgif.com-gif-maker__76_.webp" alt="Featured project gif">
               </div>
 
               <div class="tags">
@@ -260,17 +244,14 @@
                 <div class="tag">Production</div>
                 <div class="tag">Design</div>
               </div>
+            </article>
 
-            </div>
-
-
-            <div class="box-big-text-1">
+            <article class="box-big-text-1">
               <div class="text-start">
                 Art History 008.
-
               </div>
               <div class="img">
-                <img src="./public/images/art-history.webp" alt="">
+                <img src="./public/images/art-history.webp" alt="Art history image">
               </div>
 
               <div class="text-end">
@@ -278,61 +259,53 @@
                 Agnes Denes<br>
                 1982
               </div>
-            </div>
+            </article>
 
-            <div class="box-video">
-
-              <div class="text-start">
+            <article class="box-video">
+              <div class="text-start" aria-hidden="true">
                 (Y)our chess match.
-
               </div>
               <div class="video">
                 <iframe src="https://www.youtube-nocookie.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1"
-        frameborder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-            </div>
+                        frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen aria-label="Chess match video"></iframe>
+              </div>
 
               <div class="text-end">
                 John Berger - Ways of Seeing
               </div>
+            </article>
 
-            </div>
-
-
-            <div class="box-big-text">
+            <article class="box-big-text">
               <div class="text-start">
                 (Y)our chess match.
-
               </div>
               <div class="img">
-                <img src="./public/images/chess.png" alt="">
+                <img src="./public/images/chess.png" alt="Chess match image">
               </div>
 
               <div class="text-end">
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                 Tolstoy made the last move.
               </div>
-            </div>
-
+            </article>
           </div>
-
-        </div>
+        </section>
       </div>
       <div class="bottom-row">
-        <img src="./public/images/thats-all-folks-01__1_.webp" alt="That's all folks">
+        <img src="./public/images/thats-all-folks-01__1_.webp" alt="That's all folks" />
       </div>
 
-    </div>
+    </main>
 
-
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="footer-copy">
         <div class="copyright">© School 2025</div>
       </div>
       <div class="footer-content">
-        <button class="social">@schoooooooooooo1</button>
-        <button class="email">info@schoooool.com</button>
+        <button class="social" aria-label="Twitter">@schoooooooooooo1</button>
+        <button class="email" aria-label="Email">info@schoooool.com</button>
       </div>
     </footer>
   </div>
