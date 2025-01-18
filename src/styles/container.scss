@@ -1,11 +1,11 @@
-@use './variables.scss' as variables;
+@use './mixins.scss' as mixins;
 
 $avatar-size: 40px;
 $font-family: 'Inter', sans-serif;
 $icon-size: 40px;
 
 body {
-    @include variables.typography('IBM Plex Mono', 16px, #333);
+    @include mixins.typography('IBM Plex Mono', 16px, #333);
     background: linear-gradient(to right, #e3e3e3, #f6dada);
     margin: 0;
     padding: 0;
@@ -37,23 +37,35 @@ body {
 
     &__columns{
         display: flex;
-        flex: 1;
-        .column {
-            flex: 2;
-            padding: 10px;
-            border-radius: 8px;
-
-            &:nth-child(1) {
-                flex: 1.3;
-            }
-        }
     }
     
+    &__column {
+        flex: 2;
+        padding: 10px;
+        border-radius: 8px;
+        &:nth-child(1) {
+            flex: 1.3;
+        }
+    }
+
+    &__boxes-right {
+        @include mixins.column-flexbox();
+        margin-top: 20px;
+    }
+
+    &__boxes-left {
+        @include mixins.column-flexbox();
+    }
+
+    &__boxes-middle {
+        @include mixins.column-flexbox();
+        margin-top: 20px;
+      }
 
     &__bottom {
         border-radius: 8px;
         padding: 5px 10px;
-
+        margin-bottom: 1%;
         img {
             width: 100%;
             height: 100%;

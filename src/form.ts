@@ -16,7 +16,7 @@ class PollForm {
     }
 
     private showResults(): void {
-        this.container.classList.add('poll--show-results');
+        this.container.classList.add('form--show-results');
     }
 }
 

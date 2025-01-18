@@ -1,13 +1,7 @@
-@use './../variables.scss' as variables;
-
-.boxes-right {
-    @include variables.column-flexbox();
-    margin-top: 20px;
-}
-
+@use './../mixins.scss' as mixins;
 
 .box-video {
-    @include variables.box-common(11px, normal, white, left);
+    @include mixins.box-common(11px, normal, white, left);
     align-items: stretch;
     font-family: 'IBM Plex Mono', monospace;
     color: rgb(48, 48, 48);
@@ -32,12 +26,12 @@
     }
 }
 
-.box-small {
-    @include variables.flex(center, start, 20px);
+.box-small-right {
+    @include mixins.flex(center, start, 20px);
 }
 
 .box-image {
-    @include variables.box-common(11px, normal, rgb(233 232 226), left);
+    @include mixins.box-common(11px, normal, rgb(233 232 226), left);
     align-items: stretch;
     line-height: 1.4;
     font-family: 'IBM Plex Mono', monospace;
@@ -75,7 +69,7 @@
 }
 
 .card-weather {
-    @include variables.card(1);
+    @include mixins.card(1);
 
     &__content {
         display: flex;
@@ -108,16 +102,16 @@
 }
 
 .card {
-    @include variables.card(2);
+    @include mixins.card(2);
     align-items: center;
 
     &__timer-content {
-        @include variables.flex(center, center, 15px);
+        @include mixins.flex(center, center, 15px);
         flex-direction: column;
     }
 
     &__timer-display {
-        @include variables.typography('IBM Plex Mono', 42px, gray);
+        @include mixins.typography('IBM Plex Mono', 42px, gray);
         font-weight: 300;
         display: flex;
     }
@@ -143,7 +137,7 @@
 
 
     &__last-click {
-        @include variables.flex(center, start, 10px);
+        @include mixins.flex(center, start, 10px);
         padding-bottom: 2%;
         margin-left: 10px;
     }

@@ -1,11 +1,8 @@
-@use './variables.scss' as variables;
+@use './mixins.scss' as mixins;
 
-
-$avatar-size: 40px;
-$font-family: 'Inter', sans-serif;
 $icon-size: 40px;
 .header {
-    @include variables.flex(center, space-between); 
+    @include mixins.flex(center, space-between); 
 
     align-items: center;
     padding: 0 30px 0 30px;
@@ -19,11 +16,11 @@ $icon-size: 40px;
 
 
 .header__left {
-    @include variables.flex(center, start, 2px);
+    @include mixins.flex(center, start, 2px);
     margin-left: 5px;  
 }
 .header__icon {
-    @include variables.flex(center, center); 
+    @include mixins.flex(center, center); 
     width: $icon-size;
     height: $icon-size;
     border-radius: 50% 0 0 50%;
@@ -40,7 +37,7 @@ $icon-size: 40px;
 
 
 .header__button {
-    @include variables.flex(center, start, 8px); 
+    @include mixins.flex(center, start, 8px); 
     padding: 11.5px 16px;
     border: 1px solid #ddd;
     font-size: 11px;
@@ -58,7 +55,7 @@ $icon-size: 40px;
 }
 
 .header__button_icon {
-    @include variables.flex(center, center); 
+    @include mixins.flex(center, center); 
     width: $icon-size;
     height: $icon-size;
     border-radius: 0 50% 50% 0%;
@@ -80,12 +77,12 @@ $icon-size: 40px;
 }
 
 .header__right {
-    @include variables.flex(center, start, 10px); 
+    @include mixins.flex(center, start, 10px); 
 
 }
 
 .header__avatar {
-    @include variables.avatar($avatar-size);
+    @include mixins.avatar(40px);
     border: 2px solid #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;

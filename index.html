@@ -81,53 +81,54 @@
 
     <main class="container">
       <div class="container__columns">
-        <section class="column" aria-labelledby="left-column">
-          <div class="boxes-left"  aria-labelledby="left-column">
-            <article class="box-small">
-              <div class="box-small__content">
+        <section class="container__column" aria-labelledby="left-column">
+          <div class="container__boxes-left"  aria-labelledby="left-column">
+            <article class="box-small-left">
+              <div class="box-small-left__content">
                 Hi <span id="dynamic-name">Newton</span>,
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
-                School is <span class="yellow">(y)our</span> creative studio.
+                School is <span class="box-small-left__yellow">(y)our</span> creative studio.
               </div>
-              <div class="box-small__buttons">
-                <button class="box-small__buttons--social" aria-label="Twitter">@schoooooooooooo1</button>
-                <button class="box-small__buttons--email" aria-label="Email">info@schoooool.com</button>
-              </div>
-            </article>
-
-            <article class="box-medium">
-              <div class="color-card" id="colorCard" role="region" aria-labelledby="colorCard">
-                <p class="color-card__text">(Y)our interface color.</p>
-                <canvas id="colorCanvas" class="color-wheel" role="img" aria-label="Color wheel"></canvas>
+              <div>
+                <button class="box-small-left__button" aria-label="Twitter">@schoooooooooooo1</button>
+                <button class="box-small-left__button" aria-label="Email">info@schoooool.com</button>
               </div>
             </article>
 
-            <article class="box-normal">
+            <article class="box-color" id="colorCard">
+              <div class="box-color__card"  role="region" aria-labelledby="colorCard">
+                <p class="box-color__text">(Y)our interface color.</p>
+                <canvas id="colorCanvas" class="box-color__wheel" role="img" aria-label="Color wheel"></canvas>
+              </div>
+            </article>
+
+            <article class="box-image-left">
               <img src="./public/images/Bitmap-2.webp" alt="Image description">
             </article>
 
-            <article class="box-with-text" >
-              <div class="text" >
+            <article class="box-with-text">
+              <div class="box-with-text__text box-with-text__text--start">
                 <p>(Y)our virtual houseplant.</p>
               </div>
-              <div class="img">
+              <div class="box-with-text__img">
                 <img src="./public/images/plant-05.webp" alt="Houseplant">
               </div>
-
-              <div class="text-end">
+            
+              <div class="box-with-text__text box-with-text__text--end">
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                 <p>Nietzsche watered it last.</p>
               </div>
             </article>
+            
 
-            <article class="box-normal">
+            <article class="box-image-left">
               <img src="./public/images/Bitmap-2.webp" alt="Image description">
             </article>
           </div>
         </section>
 
-        <section class="column column--middle"  aria-labelledby="middle-column">
-          <div class="boxes-middle">
+        <section class="container__column"  aria-labelledby="middle-column">
+          <div class="container__boxes-middle">
             
             <article class="box-profile" >
               <div class="box-profile__container">
@@ -148,7 +149,7 @@
                   <div class="box-profile__input-placeholder" aria-hidden="true">Input your own name.</div>
                 </div>
             
-                <div class="box-profile__customization-container">
+                <div class="box-profile__customization">
                   <img src="./public/images/styles.png" alt="Customization options">
                 </div>
               </div>
@@ -168,40 +169,39 @@
                 </div>
               </div>
             </article>
-            
 
             <article class="box-medium">
               <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="Screen shot">
             </article>
 
-            <article class="poll">
-              <div class="poll__title">(Y)our poll.</div>
-              <div class="poll__container" id="pollContainer" role="form" aria-labelledby="pollForm">
-                <div class="poll__question" aria-live="polite">Vibe Check?</div>
+            <article class="form">
+              <div class="form__title">(Y)our poll.</div>
+              <div class="form__container" id="pollContainer" role="form" aria-labelledby="pollForm">
+                <div class="form__question" aria-live="polite">Vibe Check?</div>
                 <form id="pollForm" aria-labelledby="pollForm">
-                  <div class="poll__options">
-                    <label class="poll__option">
+                  <div class="form__options">
+                    <label class="form__option">
                       <input type="radio" id="option1" name="vibe" value="um" tabindex="0">
-                      <span class="poll__option-text">Um.....</span>
-                      <span class="poll__option-percentage">16%</span>
+                      <span class="form__option-text">Um.....</span>
+                      <span class="form__option-percentage">16%</span>
                     </label>
-                    <label class="poll__option">
+                    <label class="form__option">
                       <input type="radio" id="option2" name="vibe" value="warming" tabindex="0">
-                      <span class="poll__option-text">Warming up to this vibe.</span>
-                      <span class="poll__option-percentage">29%</span>
+                      <span class="form__option-text">Warming up to this vibe.</span>
+                      <span class="form__option-percentage">29%</span>
                     </label>
-                    <label class="poll__option">
+                    <label class="form__option">
                       <input type="radio" id="option3" name="vibe" value="definitely" tabindex="0">
-                      <span class="poll__option-text">Definitely vibin!</span>
-                      <span class="poll__option-percentage">36%</span>
+                      <span class="form__option-text">Definitely vibin!</span>
+                      <span class="form__option-percentage">36%</span>
                     </label>
-                    <label class="poll__option">
+                    <label class="form__option">
                       <input type="radio" id="option4" name="vibe" value="aboard" tabindex="0">
-                      <span class="poll__option-text">Been aboard the vibe train for a minute! Choo choo!!</span>
-                      <span class="poll__option-percentage">19%</span>
+                      <span class="form__option-text">Been aboard the vibe train for a minute! Choo choo!!</span>
+                      <span class="form__option-percentage">19%</span>
                     </label>
                   </div>
-                  <button type="submit" class="poll__submit-button" tabindex="0">Submit</button>
+                  <button type="submit" class="form__submit-button" tabindex="0">Submit</button>
                 </form>
               </div>
             </article>
@@ -209,9 +209,9 @@
           </div>
         </section>
 
-        <section class="column column--right" aria-labelledby="right-column">
-          <div class="boxes-right">
-            <article class="box-small">
+        <section class="container__column" aria-labelledby="right-column">
+          <div class="container__boxes-right">
+            <article class="box-small-right">
               <div class="card-weather">
                 <div class="card-weather__title">(Y)our weather.</div>
                 <div class="card-weather__content">

@@ -1,82 +1,133 @@
-@use './../variables.scss' as variables;
+@use './../mixins.scss' as mixins;
 
+.box-small-left {
+    line-height: 1.4;
+    @include mixins.box-common(20px, normal, transparent, center);
 
+    &__content {
+        font-size: 44px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: rgb(48, 48, 48);
 
-.boxes-left {
-    @include variables.column-flexbox();
-
-    .box-small {
-        line-height: 1.4;
-        @include variables.box-common(20px, normal, transparent, center);
-
-        &__content {
-            font-size: 44px;
-            font-weight: 400;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: rgb(48, 48, 48);
-
-            img {
-                border-radius: 50%;
-                max-width: 40px;
-                max-height: 40px;
-                background-color: #e0bff4;
-            }
-
-            .yellow {
-                background-color: rgb(249 236 161);
-                padding: 1%;
-            }
-        }
-
-        &__buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            border-radius: 15px;
-
-            &--social,
-            &--email {
-                background-color: #efefef;
-                line-height: 1.4;
-                font-family: 'IBM Plex Mono', monospace;
-                color: rgb(48, 48, 48);
-                font-size: 11px;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 20px;
-                cursor: pointer;
-                transition: background-color 0.3s, transform 0.3s;
-
-                &:hover {
-                    background-color: #e6e3e3;
-                    transform: scale(1.05);
-                }
-            }
-
-            &--social,
-            &--email {
-                &:hover {
-                    color: #333;
-                }
-            }
-        }
-    }
-
-    .box-medium {
-        @include variables.box-common(18px, bold, #e6f7ff, center);
-        .color-card{
-            padding-bottom: 2%;
-
-        }
-    }
-
-    .box-normal {
-        @include variables.box-common(20px, bold, white, center);
         img {
-            height: 100%;
-            width: 100%;
-            border-radius: 8px;
+            border-radius: 50%;
+            max-width: 40px;
+            max-height: 40px;
+            background-color: #e0bff4;
+        }
+    }
+
+    &__yellow {
+        background-color: rgb(249 236 161);
+        padding: 1%;
+    }
+
+    &__button {
+        background-color: #efefef;
+        line-height: 1.4;
+        font-family: 'IBM Plex Mono', monospace;
+        color: rgb(48, 48, 48);
+        font-size: 11px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &:hover {
+            background-color: #e6e3e3;
+            transform: scale(1.05);
+            color: #333;
+
         }
     }
 }
+
+.box-color {
+    @include mixins.box-common(18px, bold, white, center);
+
+    &__card {
+        padding-bottom: 2%;
+    }
+
+    &__color-card {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+
+    &__text {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 11px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    &__wheel {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.box-image-left {
+    @include mixins.box-common(20px, bold, white, center);
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+.box-with-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: white;
+    line-height: 1.4;
+  
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    &__text {
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+      width: 100%;
+    }
+  
+    &__text--start {
+      justify-content: center;
+    }
+  
+    &__text--end {
+      margin: 5px;
+      img {
+        border-radius: 50%;
+        width: 30px;
+        background-color: rgb(202, 247, 76);
+        margin-right: 10px;
+      }
+    }
+  }
+  
