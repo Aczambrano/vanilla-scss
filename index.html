@@ -59,30 +59,30 @@
   <div>
     <header class="header" role="banner">
       <nav class="header__left" aria-label="Left menu">
-        <div class="header__left--icon">
+        <div class="header__icon">
           <img src="./public/images/favicon-32x32.png" alt="Favicon">
         </div>
-        <button class="header__left--button" aria-label="Selected Work">Selected Work</button>
-        <button class="header__left--icon-button" aria-label="Information">i</button>
+        <button class="header__button" aria-label="Selected Work">Selected Work</button>
+        <button class="header__button_icon" aria-label="Information">i</button>
       </nav>
 
       <nav class="header__right" aria-label="Right menu">
-        <div class="avatar avatar--red" role="img" aria-label="Red avatar">
+        <div class="header__avatar header__avatar--red" role="img" aria-label="Red avatar">
           <img src="./public/images/avatar-01.webp" alt="Avatar 01">
         </div>
-        <div class="avatar avatar--yellow" role="img" aria-label="Yellow avatar">
+        <div class="header__avatar header__avatar--yellow" role="img" aria-label="Yellow avatar">
           <img src="./public/images/avatar-02.webp" alt="Avatar 02">
         </div>
-        <div class="avatar avatar--lilac" role="img" aria-label="Lilac avatar">
+        <div class="header__avatar header__avatar--lilac" role="img" aria-label="Lilac avatar">
           <img src="./public/images/avatar-03.webp" alt="Avatar 03">
         </div>
       </nav>
     </header>
 
     <main class="container">
-      <div class="container__columns-wrapper">
-        <section class="column column--left" aria-labelledby="left-column">
-          <div class="boxes-left">
+      <div class="container__columns">
+        <section class="column" aria-labelledby="left-column">
+          <div class="boxes-left"  aria-labelledby="left-column">
             <article class="box-small">
               <div class="box-small__content">
                 Hi <span id="dynamic-name">Newton</span>,
@@ -174,7 +174,7 @@
               <img src="./public/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp" alt="Screen shot">
             </article>
 
-            <article class="poll box-form">
+            <article class="poll">
               <div class="poll__title">(Y)our poll.</div>
               <div class="poll__container" id="pollContainer" role="form" aria-labelledby="pollForm">
                 <div class="poll__question" aria-live="polite">Vibe Check?</div>
@@ -211,56 +211,55 @@
 
         <section class="column column--right" aria-labelledby="right-column">
           <div class="boxes-right">
-            <article class="boxes-right__box-small">
+            <article class="box-small">
               <div class="card-weather">
-                <div class="card-title">(Y)our weather.</div>
-                <div class="weather-content">
-                  <div class="clouds-container">
+                <div class="card-weather__title">(Y)our weather.</div>
+                <div class="card-weather__content">
+                  <div class="card-weather__img">
                     <img src="./public/images/day-cloudy.webp" alt="Cloudy weather">
                   </div>
-                  <div class="weather-info">28°F & Clouds (NYC)</div>
+                  <div class="card-weather__info">28°F & Clouds (NYC)</div>
                 </div>
               </div>
 
               <div class="card">
-                <div class="card-title">(Y)our button</div>
-                <div class="timer-content">
-                  <div class="timer-display" id="timer" aria-live="polite">00:00:00</div>
-                  <button class="click-button" id="clickButton" aria-label="Click button">Click</button>
+                <div class="card__title">(Y)our button</div>
+                <div class="card__timer-content">
+                  <div class="card__timer-display" id="timer" aria-live="polite">00:00:00</div>
+                  <button class="card__click-button" id="clickButton" aria-label="Click button">Click</button>
                 </div>
-                <div class="last-click">
-                  <div class="user-avatar">
+                <div class="card__last-click">
+                  <div class="card__user-avatar">
                     <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                   </div>
                   <span>Anderson clicked it last.</span>
                 </div>
               </div>
             </article>
-
-            <article class="box-video">
-              <div class="box-video__text-start" aria-hidden="true">
+            <article class="box-image">
+              <div class="box-image__text-start" aria-hidden="true">
                 Featured Project
               </div>
-              <div class="box-video__gif">
+              <div class="box-image__gif">
                 <img src="./public/images/ezgif.com-gif-maker__76_.webp" alt="Featured project gif">
               </div>
 
-              <div class="box-video__tags">
-                <div class="box-video__tags--tag">Campaign</div>
-                <div class="box-video__tags--tag">Production</div>
-                <div class="box-video__tags--tag">Design</div>
+              <div class="box-image__tags">
+                <div class="box-image__tag">Campaign</div>
+                <div class="box-image__tag">Production</div>
+                <div class="box-image__tag">Design</div>
               </div>
             </article>
 
-            <article class="box-big-text-1">
-              <div class="text-start">
+            <article class="box-art">
+              <div class="box-art__text-start">
                 Art History 008.
               </div>
-              <div class="img">
+              <div class="box-art__img">
                 <img src="./public/images/art-history.webp" alt="Art history image">
               </div>
 
-              <div class="text-end">
+              <div class="box-art__text-end">
                 Wheatfield - A Confrontation <br>
                 Agnes Denes<br>
                 1982
@@ -268,30 +267,30 @@
             </article>
 
             <article class="box-video">
-              <div class="text-start" aria-hidden="true">
+              <div class="box-video__text-start" aria-hidden="true">
                 (Y)our chess match.
               </div>
-              <div class="video">
+              <div class="box-video__video">
                 <iframe src="https://www.youtube-nocookie.com/embed/0pDE4VX_9Kk?autoplay=1&controls=0&modestbranding=1"
                         frameborder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen aria-label="Chess match video"></iframe>
               </div>
 
-              <div class="text-end">
+              <div class="box-video__text-end">
                 John Berger - Ways of Seeing
               </div>
             </article>
 
-            <article class="box-big-text">
-              <div class="text-start">
+            <article class="box-chess">
+              <div class="box-chess__text-start">
                 (Y)our chess match.
               </div>
-              <div class="img">
+              <div class="box-chess__img">
                 <img src="./public/images/chess.png" alt="Chess match image">
               </div>
 
-              <div class="text-end">
+              <div class="box-chess__text-end">
                 <img src="./public/images/avatar-01.webp" alt="Avatar 01">
                 Tolstoy made the last move.
               </div>
@@ -299,7 +298,7 @@
           </div>
         </section>
       </div>
-      <div class="container__bottom-row">
+      <div class="container__bottom">
         <img src="./public/images/thats-all-folks-01__1_.webp" alt="That's all folks" />
       </div>
 
@@ -307,7 +306,7 @@
 
     <footer class="footer" role="contentinfo">
       <div class="footer__copy">
-        <div class="footer__copyright">© School 2025</div>
+        <div>© School 2025</div>
       </div>
       <div class="footer__content">
         <button class="footer__social" aria-label="Twitter">@schoooooooooooo1</button>

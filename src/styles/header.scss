@@ -15,101 +15,97 @@ $icon-size: 40px;
     left: 0;
     right: 0;
     z-index: 1000;
-
-    &__left {
-        @include variables.flex(center, start, 2px);
-
-        margin-left: 5px;
-
-        &--icon {
-            @include variables.flex(center, center); 
-            width: $icon-size;
-            height: $icon-size;
-            border-radius: 50% 0 0 50%;
-            background-color: rgba(235, 235, 235, 0.6);
-            backdrop-filter: blur(10px); 
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.2s ease-in;
-
-            &:hover {
-                background-color: #d6d6d6;
-            }
-        }
-
-        &--button {
-            @include variables.flex(center, start, 8px); 
-            padding: 11.5px 16px;
-            border: 1px solid #ddd;
-            font-size: 11px;
-            cursor: pointer;
-            background-color: rgba(235, 235, 235, 0.7);
-            backdrop-filter: blur(10px); 
-
-            line-height: 1.4;
-            font-family: 'IBM Plex Mono', monospace;
-            transition: background-color 0.2s;
-
-            &:hover {
-                background-color: #e9e9e9;
-            }
-
-            &-icon {
-                font-size: 16px;
-            }
-        }
-
-        &--icon-button {
-            @include variables.flex(center, center); 
-            width: $icon-size;
-            height: $icon-size;
-            border-radius: 0 50% 50% 0%;
-            font-size: 16px;
-            cursor: pointer;
-            border: 1px solid #ddd;
-
-            transition: background-color 0.2s;
-            background-color: rgba(235, 235, 235, 0.7);
-            backdrop-filter: blur(10px);
-
-            .header__icon-button:focus {
-                outline: none;
-            }
+}
 
 
-            &:hover {
-                background-color: #d6d6d6;
-            }
-        }
+.header__left {
+    @include variables.flex(center, start, 2px);
+    margin-left: 5px;  
+}
+.header__icon {
+    @include variables.flex(center, center); 
+    width: $icon-size;
+    height: $icon-size;
+    border-radius: 50% 0 0 50%;
+    background-color: rgba(235, 235, 235, 0.6);
+    backdrop-filter: blur(10px); 
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+
+    &:hover {
+        background-color: #d6d6d6;
+    }
+}
+
+
+.header__button {
+    @include variables.flex(center, start, 8px); 
+    padding: 11.5px 16px;
+    border: 1px solid #ddd;
+    font-size: 11px;
+    cursor: pointer;
+    background-color: rgba(235, 235, 235, 0.7);
+    backdrop-filter: blur(10px); 
+
+    line-height: 1.4;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #e9e9e9;
+    }
+}
+
+.header__button_icon {
+    @include variables.flex(center, center); 
+    width: $icon-size;
+    height: $icon-size;
+    border-radius: 0 50% 50% 0%;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+
+    transition: background-color 0.2s;
+    background-color: rgba(235, 235, 235, 0.7);
+    backdrop-filter: blur(10px);
+
+    &:focus {
+        outline: none;
     }
 
-    &__right {
-        @include variables.flex(center, start, 10px); 
+    &:hover {
+        background-color: #d6d6d6;
+    }
+}
 
-        .avatar {
-            @include variables.avatar($avatar-size);
-            border: 2px solid #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+.header__right {
+    @include variables.flex(center, start, 10px); 
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 50%;
-            }
+}
 
-            &--red {
-                background-color: #e6b3b3;
-            }
+.header__avatar {
+    @include variables.avatar($avatar-size);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
-            &--yellow {
-                background-color: #fffc9a;
-            }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 
-            &--lilac {
-                background-color: #e0bff4;
-            }
-        }
+    &--red {
+        background-color: #e6b3b3;
+    }
+
+    &--yellow {
+        background-color: #fffc9a;
+    }
+
+    &--lilac {
+        background-color: #e0bff4;
     }
 }

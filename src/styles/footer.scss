@@ -34,19 +34,13 @@
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s, transform 0.3s;
+        margin-left: 10px;
 
         &:hover {
             background-color: #e6e3e3;
             transform: scale(1.05);
+            color: #333;
+
         }
-    }
-
-    &__email {
-        margin-left: 10px;
-    }
-
-    &__social:hover,
-    &__email:hover {
-        color: #333;
     }
 }

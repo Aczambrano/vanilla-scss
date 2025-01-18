@@ -1,14 +1,11 @@
 @use './variables.scss' as variables;
 
-.box-form {
-    height: auto;
-    min-height: 300px;
-    padding: 24px;
-    border-radius: 12px;
-    background: white;
-}
 
 .poll {
+  padding-top: 24px;
+  border-radius: 12px;
+  background: white;
+
   &__title {
     text-align: center;
     font-family: monospace;
@@ -19,7 +16,6 @@
 
   &__container {
     height: auto;
-    min-height: 300px;
     padding: 24px;
     border-radius: 12px;
     background: white;
@@ -52,7 +48,6 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    position: relative;
     padding: 5px 0;
 
     &-text {
